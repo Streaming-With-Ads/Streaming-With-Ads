@@ -76,6 +76,9 @@ This project is a full-stack video streaming platform with user authentication, 
   - **Backend (Go):**
     - Stores blob data in AWS S3.
     - Stores metadata in Cassandra.
+- **Demo:**:
+![image](https://github.com/user-attachments/assets/d9bfca28-42dd-444e-a6fc-eec9a1c2c53e)
+
 
 ## Architecture Overview
 
@@ -103,7 +106,3 @@ This project is a full-stack video streaming platform with user authentication, 
 - Implement input validation and sanitization to prevent SQL injection and XSS attacks.
 - Securely store passwords using hashing algorithms like bcrypt.
 - Ensure secure payment processing with Stripe or equivalent services.
-
-## Getting Started
-
-To get started with this project, follow the setup instructions in the [SETUP.md](SETUP.md) file.
