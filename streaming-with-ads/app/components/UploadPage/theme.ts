@@ -1,13 +1,20 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, ThemeConfig, ThemeOverride } from "@chakra-ui/react";
 
-const theme = extendTheme({
+// Define the configuration type
+const config: ThemeConfig = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+};
+
+const theme: ThemeOverride = {
+  config,
   styles: {
-    global: {
+    global: (props: { colorMode: 'light' | 'dark' }) => ({
       body: {
-        bg: "#111827",
-        color: "white",
+        bg: props.colorMode === 'dark' ? "gray.900" : "white",
+        color: props.colorMode === 'dark' ? "white" : "gray.800",
       },
-    },
+    }),
   },
   colors: {
     brand: {
@@ -16,6 +23,13 @@ const theme = extendTheme({
       600: "#2563EB",
     },
     gray: {
+      50: "#F9FAFB",
+      100: "#F3F4F6",
+      200: "#E5E7EB",
+      300: "#D1D5DB",
+      400: "#9CA3AF",
+      500: "#6B7280",
+      600: "#4B5563",
       700: "#374151",
       800: "#1F2937",
       900: "#111827",
@@ -44,13 +58,14 @@ const theme = extendTheme({
       },
     },
     Modal: {
-      baseStyle: {
+      baseStyle: (props: { colorMode: 'light' | 'dark' }) => ({
         dialog: {
-          bg: "#f9f9f9",
+          bg: props.colorMode === 'dark' ? "gray.800" : "white",
+          color: props.colorMode === 'dark' ? "white" : "gray.800",
         },
-      },
+      }),
     },
   },
-});
+};
 
-export default theme;
+export default extendTheme(theme);

@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ onUploadClick }) => (
     bg="gray.800"
     position="fixed"
     w="100%"
-    h="6%"
+    h="7%"
     top={0}
     left={0}
     zIndex={1000}
