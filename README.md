@@ -76,7 +76,7 @@ This project is a full-stack video streaming platform with user authentication, 
   - **Backend (Go):**
     - Stores blob data in AWS S3.
     - Stores metadata in Cassandra.
-- **Demo:**:
+- **Demo:**
 ![image](https://github.com/user-attachments/assets/d9bfca28-42dd-444e-a6fc-eec9a1c2c53e)
 
 
