@@ -1,5 +1,8 @@
 import UploadPage from './components/UploadPage';
+import { ChakraProvider } from '@chakra-ui/react'
 
 export default function Home() {
-  return <UploadPage/>;
+  return <ChakraProvider>
+    <UploadPage />
+  </ChakraProvider>;
 }
