@@ -68,4 +68,4 @@ const theme: ThemeOverride = {
   },
 };
 
-export default theme;
+export default extendTheme(theme);
