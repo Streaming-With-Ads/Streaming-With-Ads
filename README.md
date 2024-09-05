@@ -21,8 +21,20 @@ This project is a full-stack video streaming platform with user authentication, 
     - APIs: GraphQL mutations for registration, login, and profile updates.
   - **GraphQL:**
     - Queries and Mutations: `registerUser`, `login`, `logout`, `updateUserProfile`, `getUserProfile`.
+   
+### 2. Video Uploading
+- **Features:**
+  - Content creators can upload videos and metadata.
+- **Tech Stack:**
+  - **Frontend (React):**
+    - Components: Upload button for video uploads.
+  - **Backend (Go):**
+    - Stores blob data in AWS S3.
+    - Stores metadata in Cassandra.
+- **Demo:**
+![image](https://github.com/user-attachments/assets/d9bfca28-42dd-444e-a6fc-eec9a1c2c53e)
 
-### 2. Subscription Management
+### 3. Subscription Management
 - **Features:**
   - Users can subscribe to different tiers (e.g., Basic, Premium).
   - Payment processing for subscriptions.
@@ -37,7 +49,7 @@ This project is a full-stack video streaming platform with user authentication, 
   - **GraphQL:**
     - Queries and Mutations: `subscribe`, `cancelSubscription`, `getSubscriptionDetails`.
 
-### 3. Video Search & Recommendation
+### 4. Video Search & Recommendation
 - **Features:**
   - Search for videos based on various criteria.
   - Personalized video recommendations.
@@ -52,7 +64,7 @@ This project is a full-stack video streaming platform with user authentication, 
   - **GraphQL:**
     - Queries: `searchVideos`, `getRecommendations`.
 
-### 4. Video Streaming with Ads
+### 5. Video Streaming with Ads
 - **Features:**
   - Stream videos with embedded ads for certain subscription tiers.
   - Personalized ads based on user data and viewing history.
@@ -66,16 +78,6 @@ This project is a full-stack video streaming platform with user authentication, 
     - APIs: GraphQL queries for video content and ads.
   - **GraphQL:**
     - Queries: `getVideoContent`, `getAdsForUser`.
-
-### 5. Video Uploading
-- **Features:**
-  - Content creators can upload videos and metadata.
-- **Tech Stack:**
-  - **Frontend (React):**
-    - Components: Upload button for video uploads.
-  - **Backend (Go):**
-    - Stores blob data in AWS S3.
-    - Stores metadata in Cassandra.
 
 ## Architecture Overview
 
@@ -103,7 +105,3 @@ This project is a full-stack video streaming platform with user authentication, 
 - Implement input validation and sanitization to prevent SQL injection and XSS attacks.
 - Securely store passwords using hashing algorithms like bcrypt.
 - Ensure secure payment processing with Stripe or equivalent services.
-
-## Getting Started
-
-To get started with this project, follow the setup instructions in the [SETUP.md](SETUP.md) file.
